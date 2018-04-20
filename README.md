@@ -14,7 +14,7 @@ end
 ```elixir
 use Mix.Config
 
-config :line,
+config :line_pay,
   channel_id: 999999999,
   channel_secret: "YOUR CHANNEL SECRET",
   sandbox: true,
