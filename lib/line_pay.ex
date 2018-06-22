@@ -44,8 +44,8 @@ defmodule LinePay do
 
   # キャンセルURL
   defp cancel_url("browser", _), do: ""
-  defp cancel_url("ios", _), do: "#{Environment.cancel_url_ios()}"
-  defp cancel_url("android", _), do: "#{Environment.cancel_url_android()}"
+  defp cancel_url("ios", order_id), do: "#{Environment.cancel_url_ios()}/#{order_id}"
+  defp cancel_url("android", order_id), do: "#{Environment.cancel_url_android()}/#{order_id}"
 
   @doc """
   capture: true -> 決済完了状態に更新
